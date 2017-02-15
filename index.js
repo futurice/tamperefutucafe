@@ -13,6 +13,7 @@ $(function() {
 	var songFeedUrl = 'https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&' + $.param(songFeedQuery);
 	var songName = $('#playing');
 	var songCover = $('#cover');
+	var bg = $('#bg');
 	var lastSong;
 
 
@@ -29,9 +30,9 @@ $(function() {
 	}
 
 	function updateSong(artist, song, cover) {
-		currentSong = songName.html();
-		songCover.attr('src', cover);
-		songName.html(artist + ' &bull; ' + song);
+		songName.html(artist + ' &bull; ' + song); // song name
+		songCover.attr('src', cover); // set song to cover art
+		bg.css('background-image', 'url(' + cover + ')'); // set cover as background layer
 	}
 
 	getSong();
