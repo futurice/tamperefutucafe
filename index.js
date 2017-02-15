@@ -9,7 +9,9 @@ $(function() {
 		user: LASTFM_USER,
 		api_key: LASTFM_API_KEY
 	}
-	var songFeedUrl = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&' + $.param(songFeedQuery);
+
+	var corsUrl = 'http://crossorigin.me/';
+	var songFeedUrl = corsUrl + 'https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&' + $.param(songFeedQuery);
 	var songName = $('#playing');
 	var songCover = $('#cover');
 	var lastSong;
