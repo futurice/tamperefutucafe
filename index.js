@@ -10,8 +10,7 @@ $(function() {
 		api_key: LASTFM_API_KEY
 	}
 
-	var corsUrl = 'http://crossorigin.me/';
-	var songFeedUrl = corsUrl + 'https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&' + $.param(songFeedQuery);
+	var songFeedUrl = 'https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&' + $.param(songFeedQuery);
 	var songName = $('#playing');
 	var songCover = $('#cover');
 	var lastSong;
