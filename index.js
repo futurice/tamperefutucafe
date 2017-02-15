@@ -2,6 +2,7 @@ $(function() {
 	var UPDATE_SONG_INTERVAL = 10000;
 	var LASTFM_API_KEY = 'b25d40b918b28f62b666c6561c6446c6';
 	var LASTFM_USER = 'tamperefutucafe';
+	var PLACEHOLDER_IMG = 'https://www.instagram.com/p/BQiEYnAjhUl/media/?size=l';
 
 
 	var songFeedQuery = {
@@ -31,7 +32,7 @@ $(function() {
 
 	function updateSong(artist, song, cover) {
 		songName.html(artist + ' &bull; ' + song); // song name
-		songCover.attr('src', cover); // set song to cover art
+		songCover.attr('src', cover || PLACEHOLDER_IMG); // set song to cover art
 		bg.css('background-image', 'url(' + cover + ')'); // set cover as background layer
 	}
 

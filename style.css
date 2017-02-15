@@ -44,7 +44,8 @@ h1 {
 	display: block;
 	background-position: center;
 	background-size: cover;
-	opacity: 0.03;
+	/* filter: blur(10px) contrast(0.5); */
+	opacity: 0.05;
 }
 
 .song {
@@ -55,30 +56,44 @@ h1 {
 }
 
 .song__cover {
-	margin-right: 40px;
+	margin-right: 50px;
 	width: 250px;
 	height: 250px;
-	background-color: rgba(255, 255, 255, .1);
 	border-radius: 50%;
 	position: relative;
 }
 
 
-.song__cover::after, .song__cover::before {
-	content: '';
+.rings {
+	animation: round 3.33s linear infinite;
 	position: absolute;
 	z-index: 1;
 	left: 0;
 	right: 0;
 	top: 0;
 	bottom: 0;
-	border-radius: 50%;
-	background: #fff;
-	animation: pulse 1.3s ease-out infinite;
-	opacity: .2;
 }
 
-.song__cover::before {
+.rings::after, .rings::before {
+	content: '';
+	position: absolute;
+	z-index: 1;
+	left: 1px;
+	right: 1px;
+	top: 1px;
+	bottom: 1px;
+	border-radius: 50%;
+
+	background: #fff;
+	animation: pulse 2.25s ease-out infinite;
+	opacity: .25;
+}
+
+.rings::after {
+	background: linear-gradient(transparent, #fff);
+}
+
+.rings::before {
 	left: -12px;
 	right: -12px;
 	top: -12px;
@@ -88,12 +103,16 @@ h1 {
 	animation-timing-function: linear;
 }
 
+
+
 .song__cover img {
 	z-index: 2;
 	position: relative;
 	border-radius: 0px;
 	border-radius: 50%;
 	max-width: 100%;
+	width: 250px;
+	height: 250px;
 	animation: scale-in 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 	transform-origin: 50% 50%;
 }
@@ -150,14 +169,24 @@ h1 {
 @keyframes pulse {
   0% {
     transform: scale(1);
-    background-color: #FFF;
   }
   50% {
     transform: scale(1.15);
-    background-color: rgba(255, 255, 255, .5);
   }
   100% {
     transform: scale(1);
-    background-color: #FFF;
+  }
+}
+
+@keyframes round {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
