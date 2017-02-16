@@ -8,7 +8,9 @@ $(function() {
 	var songFeedQuery = {
 		format: 'json',
 		user: LASTFM_USER,
-		api_key: LASTFM_API_KEY
+		api_key: LASTFM_API_KEY,
+		limit: 3,
+		extended: 1
 	}
 
 	var songFeedUrl = 'https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&' + $.param(songFeedQuery);
