@@ -155,13 +155,35 @@ h1 {
 	width: 44px;
 	height: 44px;
 	position: relative;
-	bottom: -12px;
-	margin-right: 8px;
+	margin-right: 10px;
+
 }
 .play {
 	background-image: url('play.svg');
 }
 
+/* Mobile styles */
+@media (max-width: 768px) {
+	body {
+		font-size: 2vmin;
+	}
+	.container {
+		overflow: hidden;
+	}
+  .song {
+    flex-direction: column;
+  }
+  .song__cover {
+  	margin: 0 auto 30px;
+  }
+  .song__info__name, .song__info__title {
+  	font-size: 3em;
+  	text-align: center;
+  }
+}
+
+
+/* Animations */
 @keyframes fade-in {
   0% {
     opacity: 0;
