@@ -33,7 +33,7 @@ $(function() {
 	}
 
 	function updateSong(artist, song, cover) {
-		songName.html(artist + ' &bull; ' + song); // song name
+		songName.html('<span class="artist">' + artist + ' &bull; </span>' + song); // song name
 		songCover.attr('src', cover || PLACEHOLDER_IMG); // set song to cover art
 		bg.css('background-image', 'url(' + cover + ')'); // set cover as background layer
 	}

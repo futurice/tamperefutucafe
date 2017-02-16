@@ -11,11 +11,13 @@ body {
 	font-weight: 400;
 	font-family: 'proxima-nova', 'Futurice Regular', sans-serif;
 	font-size: 16px;
+	font-size: 1.1vmin;
 	-webkit-font-smoothing: antialiased;
 	background: #46289A;
 	background: linear-gradient(120deg, #46289A 0%, #8735a5 100%);
 	color: #FFF;
 	position: relative;
+	overflow: hidden;
 }
 
 
@@ -34,6 +36,7 @@ h1 {
 	z-index: 2;
 	background-color: rgba(230, 230, 230, .1);
 }
+
 #bg {
 	content: '';
 	position: absolute;
@@ -128,13 +131,22 @@ h1 {
 	font-weight: bold;
 	animation: scale-in 0.55s cubic-bezier(0.25, 0.8, 0.25, 1);
 	transform-origin: 0 0;
+	color: rgba(255,255,255,.75);
 }
+
+.song__info__name .artist {
+	color: #FFF;
+}
+
 .song__info__title {
-	font-size: 1.8em;
+	font-size: 2em;
 	text-transform: uppercase;
 	margin-bottom: 20px;
-	color: #FF5240;
 	color: #f76c6f;
+	display: flex;
+	align-items: center;
+	font-weight: 600;
+	letter-spacing: 3px;
 }
 
 .icon {
