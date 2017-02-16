@@ -12,7 +12,8 @@ body {
 	font-family: 'Futurice Regular', sans-serif;
 	font-size: 16px;
 	-webkit-font-smoothing: antialiased;
-	background-color: #46289A;
+	background: #46289A;
+	background: linear-gradient(120deg, #46289A 0%, #8735a5 100%);
 	color: #FFF;
 	position: relative;
 }
