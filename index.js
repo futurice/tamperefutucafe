@@ -23,9 +23,9 @@ $(function() {
 	function getSong() {
 		$.get(songFeedUrl, function(data) {
 			lastSong = data.recenttracks.track[0];
-			lastSongCover = _.find(lastSong.image, { size: 'extralarge'})
+			lastSongCover = _.find(lastSong.image, { size: 'extralarge'});
 			updateSong(
-				lastSong.artist['#text'],
+				_.get(lastSong, 'artist.name'),
 				lastSong.name,
 				lastSongCover ? lastSongCover['#text'] : ''
 			);
