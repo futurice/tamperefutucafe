@@ -92,52 +92,6 @@ h1 {
 	float: left;
 }
 
-/*
-.rings {
-	-webkit-animation: round 3.33s linear infinite;
-	animation: round 3.33s linear infinite;
-	position: absolute;
-	z-index: 1;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-}
-
-.rings::after, .rings::before {
-	content: '';
-	position: absolute;
-	z-index: 1;
-	left: 1px;
-	right: 1px;
-	top: 1px;
-	bottom: 1px;
-	border-radius: 50%;
-
-	background: #fff;
-	-wekbit-animation: pulse 2.25s ease-out infinite;
-	animation: pulse 2.25s ease-out infinite;
-	opacity: .25;
-}
-
-.rings::after {
-	background: -webkit-linear-gradient(transparent, #fff);
-	background: linear-gradient(transparent, #fff);
-}
-
-.rings::before {
-	left: -12px;
-	right: -12px;
-	top: -12px;
-	bottom: -12px;
-	opacity: .1;
-	-webkit-animation-delay: 0.1s;
-	-webkit-animation-timing-function: linear;
-	animation-delay: 0.1s;
-	animation-timing-function: linear;
-}
-*/
-
 
 .song__cover img {
 	z-index: 2;
@@ -160,7 +114,7 @@ h1 {
 }
 
 .song__info__name {
-	font-size: 1.8em;
+	font-size: 1.7em;
 	font-weight: bold;
 	-webkit-animation: scale-in 0.55s cubic-bezier(0.25, 0.8, 0.25, 1);
 	animation: scale-in 0.55s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -175,13 +129,13 @@ h1 {
 }
 
 .song__info__title {
-	font-size: 1.1em;
 	text-transform: uppercase;
 	color: #329E41;
-	display: flex;
-	align-items: center;
-	font-weight: 600;
 	letter-spacing: 3px;
+	font-weight: 500;
+	font-size: 28px;
+	line-height: 30px;
+	vertical-align: middle;
 }
 
 .icon {
@@ -190,9 +144,9 @@ h1 {
 	width: 28px;
 	height: 28px;
 	position: relative;
-	top: -2px;
 	margin-right: 10px;
-
+	float: left;
+	top: -1px;
 }
 .play {
 	background-image: url('play.svg');
@@ -203,9 +157,11 @@ h1 {
 	position: absolute;
 	top: 55%;
 	transform: translate3d(0, -50%, 0);
+	-webkit-transform: translate3d(0, -50%, 0);
 	right: 30px;
 	font-size: 3em;
 	line-height: 1;
+	color: #329E41;
 }
 
 /* Mobile styles */
