@@ -42,4 +42,17 @@ $(function() {
 	setInterval(getSong, UPDATE_SONG_INTERVAL);
 
 
+	// Clock
+	var TIME_FORMAT = 'HH:mm';
+	var clock = $('#clock');
+	var time;
+
+	function setClock() {
+		time = moment().format(TIME_FORMAT);
+		clock.html(time);
+	}
+
+	setClock();
+	setInterval(setClock, 5000);
+
 });
