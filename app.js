@@ -1,5 +1,5 @@
 $(function() {
-	var UPDATE_SONG_INTERVAL = 10000;
+	var UPDATE_SONG_INTERVAL = 30000;
 	var LASTFM_API_KEY = 'b25d40b918b28f62b666c6561c6446c6';
 	var LASTFM_USER = 'tamperefutucafe';
 	var PLACEHOLDER_IMG = 'placeholder.jpg';
@@ -53,6 +53,6 @@ $(function() {
 	}
 
 	setClock();
-	setInterval(setClock, 5000);
+	setInterval(setClock, 20000);
 
 });
