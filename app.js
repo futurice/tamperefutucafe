@@ -74,7 +74,7 @@ $(function() {
 		cnt: 1
 	};
 
-	var corsUrl = '//cors-anywhere.herokuapp.com/';
+	var corsUrl = 'https://cors-anywhere.herokuapp.com/';
 	var weatherApiUrl = corsUrl + 'http://api.openweathermap.org/data/2.5/weather?' + $.param(weatherQuery);
 
 	var iconMapping = {
