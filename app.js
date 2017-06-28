@@ -118,9 +118,8 @@ $(function() {
 	setInterval(getWeather, 120000);
 
 	function updateWeather(temperature, icon) {
-		wTemperature.html(temperature + ' ºC'); // temperature
+		wTemperature.html(temperature + 'ºC'); // temperature
 		wIcon.attr('class', icon); // temperature
-		// songCover.attr('src', cover || PLACEHOLDER_IMG); // icon
 	}
 
 });
