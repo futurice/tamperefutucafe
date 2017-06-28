@@ -63,13 +63,15 @@ $(function() {
 	// # Weather
 	var WEATHER_APP_ID = '488e49ee1ce983be59e69292af6c9dd4';
 	var WEATHER_LOCATION = 'Tampere';
+	var WEATHER_LOCATION_LAT = '61.501856';
+	var WEATHER_LOCATION_LON = '23.762890';
 
 	var weatherQuery = {
 		units: 'metric',
 		lang: 'en',
-		q: WEATHER_LOCATION,
-		// lat:Settings.get().coords.lat,
-		// lon:Settings.get().coords.lng
+		// q: WEATHER_LOCATION,
+		lat: WEATHER_LOCATION_LAT,
+		lon: WEATHER_LOCATION_LON,
 		APPID: WEATHER_APP_ID,
 		cnt: 1
 	};
