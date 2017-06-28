@@ -73,7 +73,9 @@ $(function() {
 		APPID: WEATHER_APP_ID,
 		cnt: 1
 	};
-	var weatherApiUrl = 'https://api.openweathermap.org/data/2.5/weather?' + $.param(weatherQuery);
+
+	var corsUrl = '//cors-anywhere.herokuapp.com/';
+	var weatherApiUrl = corsUrl + 'http://api.openweathermap.org/data/2.5/weather?' + $.param(weatherQuery);
 
 	var iconMapping = {
 		'01d': 'ion-ios-sunny-outline',
