@@ -70,8 +70,8 @@ $(function() {
 		units: 'metric',
 		lang: 'en',
 		// q: WEATHER_LOCATION,
-		lat: WEATHER_LOCATION_LAT,
-		lon: WEATHER_LOCATION_LON,
+		lat: WEATHER_LOCATION_LAT, // Tampella
+		lon: WEATHER_LOCATION_LON, // Tampella
 		APPID: WEATHER_APP_ID,
 		cnt: 1
 	};
@@ -120,7 +120,7 @@ $(function() {
 	setInterval(getWeather, 120000);
 
 	function updateWeather(temperature, icon) {
-		wTemperature.html(temperature + 'ºC'); // temperature
+		wTemperature.html(temperature + 'º'); // temperature
 		wIcon.attr('class', icon); // temperature
 	}
 
