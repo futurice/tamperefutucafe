@@ -120,7 +120,7 @@ $(function() {
 	setInterval(getWeather, 120000);
 
 	function updateWeather(temperature, icon) {
-		wTemperature.html(temperature + 'º'); // temperature
+		wTemperature.html(temperature + '<span class="degree">º</span>'); // temperature
 		wIcon.attr('class', icon); // temperature
 	}
 
