@@ -15,11 +15,6 @@ body {
 	font-size: 1.1vmin;
 	font-size: 16px;
 	-webkit-font-smoothing: antialiased;
-	/*
-	background: #46289A;
-	background: -webkit-linear-gradient(-45deg, #46289A 0%, #8735a5 100%);
-	background: linear-gradient(120deg, #46289A 0%, #8735a5 100%);
-	*/
 	background: #FFF;
 	color: #210F00;
 	position: relative;
@@ -39,10 +34,6 @@ h1 {
 	top: 0;
 	bottom: 0;
 	display: block;
-	/*
-	justify-content: center;
-	align-items: center;
-	*/
 	padding: 0;
 	z-index: 2;
 	background-color: rgba(230, 230, 230, .1);
@@ -59,30 +50,15 @@ h1 {
 	display: block;
 	background-position: center;
 	background-size: cover;
-	/* filter: blur(10px) contrast(0.5); */
 	opacity: 0.05;
 	display: none;
 }
 
 .song {
-	/*
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	*/
 	animation: fade-in 0.4s ease;
 	width: 80%;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	/*
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	-webkit-transform: translate3d(-50%, -50%, 0);
-	transform: translate3d(-50%, -50%, 0);
-	width: 80%;
-	*/
-
 }
 
 .song__cover {
@@ -155,7 +131,7 @@ h1 {
 }
 
 
-.clock {
+.right-panel {
 	position: absolute;
 	top: 55%;
 	transform: translate3d(0, -50%, 0);
@@ -163,7 +139,29 @@ h1 {
 	right: 30px;
 	font-size: 3em;
 	line-height: 1;
-	color: #329E41;
+	color: #46289A;
+	min-width: 250px;
+}
+
+.clock {
+	display: inline-block;
+	text-align: right;
+}
+
+.weather {
+	display: inline-block;
+	margin-right: 35px;
+	color: #BEC3E6;
+	padding-left: 75px;
+}
+.weather i {
+	font-size: 1.8em;
+
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translate3d(0, -50%, 0);
+	-webkit-transform: translate3d(0, -50%, 0);
 }
 
 /* Mobile styles */
@@ -229,56 +227,5 @@ h1 {
   }
   to {
     transform: scale(1);
-  }
-}
-
-@-wekbit-keyframes pulse {
-  0% {
-    -webkit-transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(1.15);
-  }
-  100% {
-    -webkit-transform: scale(1);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.15);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-
-@-webkit-keyframes round {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  50% {
-    -webkit-transform: rotate(180deg);
-    opacity: 0.8;
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-@keyframes round {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-    opacity: 0.8;
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }
