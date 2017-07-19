@@ -108,7 +108,7 @@ $(function() {
 
 	function getWeather() {
 		$.get(weatherApiUrl, function(data) {
-			var temperature = Math.round(_.get(data, ['main','temp'], 0) * 10) / 10;
+			var temperature = Math.round(_.get(data, ['main','temp'], 0));
 			var iconCode = _.get(data, ['weather', 0, 'icon'], 'na');
 			var icon = iconMapping[iconCode];
 
