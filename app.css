@@ -167,6 +167,7 @@ h1 {
 	left: 0;
 	transform: translate3d(0, -50%, 0);
 	-webkit-transform: translate3d(0, -50%, 0);
+	/*
 	text-shadow: 1px 1px 1px #edeef4,
 		2px 2px 1px #edeef4,
 		3px 3px 1px #edeef4,
@@ -207,6 +208,7 @@ h1 {
 		38px 38px 1px #edeef4,
 		39px 39px 1px #edeef4,
 		40px 40px 1px #edeef4;
+	*/
 }
 
 /* Mobile styles */
