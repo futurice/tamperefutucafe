@@ -124,4 +124,23 @@ $(function() {
 		wIcon.attr('class', icon); // temperature
 	}
 
+	// # Indoor Temperature
+	var INDOOR_ROOM = 'cafe';
+	var indoorTemperatureApiUrl = corsUrl + 'https://tammmerforce-mqtt-server.herokuapp.com/api/v1/beacons/' +  INDOOR_ROOM;
+
+	// DOM selectors
+	var iTemperature = $('#indoor-temperature');
+
+	function getIndoorTemperature() {
+		$.get(indoorTemperatureApiUrl, function(response) {
+			var temperature = _.get(response, ['data','temperature'], '-');
+			var formattedTemperature = temperature.toFixed(1);
+
+			iTemperature.html(formattedTemperature + '<span class="degree">º</span>');
+		});
+	};
+
+	getIndoorTemperature();
+	setInterval(getIndoorTemperature, 30000);
+
 });

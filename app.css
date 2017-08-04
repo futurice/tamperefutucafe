@@ -150,15 +150,27 @@ h1 {
 
 .weather {
 	display: inline-block;
-	margin-right: 35px;
+	margin-right: 30px;
 	color: #8e96cc;
 	padding-left: 78px;
+	position: relative;
 }
+
+.weather--indoor {
+	padding-left: 64px;
+	margin-right: 65px;
+}
+
 .weather .degree {
 	font-size: 0.8em;
 	position: relative;
 	top: -7px;
 }
+.weather .icon--home {
+	font-size: 1.2em;
+	top: 50%;
+}
+
 .weather i {
 	font-size: 1.8em;
 
